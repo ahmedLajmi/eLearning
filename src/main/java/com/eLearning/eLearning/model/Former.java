@@ -12,7 +12,7 @@ import java.util.Objects;
 public class Former {
    @Id
    @GeneratedValue
-   private long idFormer;
+   private long id;
    
    @Column(name = "first_name")
    private String firstName;
@@ -35,8 +35,8 @@ public class Former {
         // Empty constructor
     }
 
-    public Former(long idFormer, String firstName, String lastName, long telephone, String email) {
-        this.idFormer = idFormer;
+    public Former(long id, String firstName, String lastName, long telephone, String email) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.telephone = telephone;
@@ -66,8 +66,8 @@ public class Former {
                 Objects.equals(email, former.email) &&
                 Objects.equals(telephone, former.telephone);
     }
-    public long getIdFormer() {
-        return idFormer;
+    public long getId() {
+        return id;
     }
 
     public String getfirstName() {
@@ -90,8 +90,8 @@ public class Former {
         return formations;
     }
 
-    public void setIdFormer(long idFormer) {
-        this.idFormer = idFormer;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public void setFirstName(String firstName) {

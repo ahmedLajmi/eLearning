@@ -32,7 +32,6 @@ public class InscriptionResource {
         return this.inscriptionService.findAll();
     }
 
-    /*
     @GetMapping("/formation/{id}")
     public List<Inscription> findAllByFormation(@PathVariable Long id) {
         return this.inscriptionService.findAllByFormation(id);
@@ -42,7 +41,6 @@ public class InscriptionResource {
     public List<Inscription> findAllByCandidate(@PathVariable Long id) {
         return this.inscriptionService.findAllByCandidate(id);
     }
-    */
 
     @GetMapping("/{id}")
     public Inscription findById(@PathVariable Long id) {

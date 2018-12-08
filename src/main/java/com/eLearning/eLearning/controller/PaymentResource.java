@@ -31,12 +31,10 @@ public class PaymentResource {
         return this.paymentService.findAll();
     }
 
-    /*
     @GetMapping("/inscription/{id}")
     public List<Payment> findAllByInscription(@PathVariable Long id) {
         return this.paymentService.findByInscription(id);
     }
-    */
 
     @GetMapping("/{id}")
     public Payment findById(@PathVariable Long id) {

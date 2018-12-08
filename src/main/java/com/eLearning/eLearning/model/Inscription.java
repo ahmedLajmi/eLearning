@@ -9,62 +9,62 @@ import java.util.Objects;
 public class Inscription {
     @Id
     @GeneratedValue
-    private long idInscription;
+    private long id;
     
     private Date inscriptionDate;
     
     @ManyToOne
-    @JoinColumn(name="idCondidate")
-    private Candidate condidate;
+    @JoinColumn(name="candidate_id")
+    private Candidate candidate;
 
 
     @ManyToOne
-    @JoinColumn(name="idFormation")
+    @JoinColumn(name="formation_id")
     private Formation formation;
 
 
     @Override
     public int hashCode() {
-        return Objects.hash(idInscription);
+        return Objects.hash(id);
     }
     
-    public Inscription(long idInscription, Date inscriptionDate, Candidate condidate /*, Formation formation*/) {
-        this.idInscription = idInscription;
+    public Inscription(long id, Date inscriptionDate, Candidate condidate , Formation formation) {
+        this.id = id;
         this.inscriptionDate = inscriptionDate;
-        this.condidate = condidate;
-        //this.formation = formation;
+        this.candidate = condidate;
+        this.formation = formation;
     }
 
     public Inscription() {
         // empty constructor
     }
 
-    public void setIdInscription(long idInscription) {
-        this.idInscription = idInscription;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public void setInscriptionDate(Date inscriptionDate) {
         this.inscriptionDate = inscriptionDate;
     }
 
-    public void setCondidate(Candidate condidate) {
-        this.condidate = condidate;
+    public void setCandidate(Candidate candidate) {
+        this.candidate = candidate;
     }
 
     public void setFormation(Formation formation) {
         this.formation = formation;
     }
 
-    public long getIdInscription() {
-        return idInscription;
+    public long getId() {
+        return id;
     }
 
     public Date getInscriptionDate() {
         return inscriptionDate;
     }
 
-    public Candidate getCondidate() {
-        return condidate;
+    public Candidate getCandidate() {
+        return candidate;
     }
 
 

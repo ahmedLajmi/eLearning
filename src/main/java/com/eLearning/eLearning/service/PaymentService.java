@@ -28,12 +28,10 @@ public class PaymentService {
     public Payment findById(long id) {
         return this.paymentRepository.findById(id).orElse(null);
     }
-    
-    /*
+
     public List<Payment> findByInscription(long id) {
-        return this.paymentRepository.findAllByIdInscription(id);
+        return this.paymentRepository.findByInscriptionId(id);
     }
-    */
     
     public Payment create(Payment payment) {
         return this.paymentRepository.save(payment);

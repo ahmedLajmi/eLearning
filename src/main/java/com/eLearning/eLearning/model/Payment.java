@@ -9,20 +9,20 @@ public class Payment {
 
     @Id
     @GeneratedValue
-    private long idPayments;
+    private long id;
     
     private float amount;
     
     @ManyToOne
-    @JoinColumn(name="idInscription")
+    @JoinColumn(name="inscription_id")
     private Inscription inscription;
 
     @Override
     public int hashCode() {
-        return Objects.hash(idPayments);
+        return Objects.hash(id);
     }
     public Payment(long idPayments, float amount, Inscription inscription) {
-        this.idPayments = idPayments;
+        this.id = id;
         this.amount = amount;
         this.inscription = inscription;
     }
@@ -31,8 +31,8 @@ public class Payment {
         // empty constructor
     }
 
-    public void setIdPayments(long idPayments) {
-        this.idPayments = idPayments;
+    public void setId(long idPayments) {
+        this.id = id;
     }
 
     public void setAmount(float amount) {
@@ -43,8 +43,8 @@ public class Payment {
         this.inscription = inscription;
     }
 
-    public long getIdPayments() {
-        return idPayments;
+    public long getId() {
+        return id;
     }
 
     public float getAmount() {

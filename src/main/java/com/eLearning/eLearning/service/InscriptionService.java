@@ -40,16 +40,15 @@ public class InscriptionService {
     public Inscription findById(long id) {
         return this.inscriptionRepository.findById(id).orElse(null);
     }
-    
-    /*
+
     public List<Inscription> findAllByFormation(long id) {
-        return this.inscriptionRepository.findAllByIdFormation(id);
+        return this.inscriptionRepository.findByFormationId(id);
     }
     
     public List<Inscription> findAllByCandidate(long id) {
-        return this.inscriptionRepository.findAllByIdCondidate(id);
+        return this.inscriptionRepository.findByCandidateId(id);
     }
-    */
+
     public void delete(Long id) {
         this.inscriptionRepository.deleteById(id);
     }

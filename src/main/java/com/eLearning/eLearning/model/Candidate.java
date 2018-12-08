@@ -13,7 +13,7 @@ import java.util.Objects;
 public class Candidate {
    @Id
    @GeneratedValue
-   private long idCondidate;
+   private long id;
    
    private String familyName;
    private String name;
@@ -21,15 +21,15 @@ public class Candidate {
    private String email;
 
 
-   @OneToMany(mappedBy ="condidate")
+   @OneToMany(mappedBy ="candidate")
     private List<Inscription> inscriptions = new ArrayList<>();
 
    @Override
     public int hashCode() {
         return Objects.hash(name);
     }
-    public Candidate(long idCondidate, String familyName, String name, long phone, String email) {
-        this.idCondidate = idCondidate;
+    public Candidate(long id, String familyName, String name, long phone, String email) {
+        this.id = id;
         this.familyName = familyName;
         this.name = name;
         this.phone = phone;
@@ -40,8 +40,8 @@ public class Candidate {
         // empty constructor
     }
 
-    public void setIdCondidate(long idCondidate) {
-        this.idCondidate = idCondidate;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public void setFamilyName(String familyName) {
@@ -60,14 +60,12 @@ public class Candidate {
         this.email = email;
     }
 
-    /*
     public void setInscriptions(List<Inscription> inscriptions) {
         this.inscriptions = inscriptions;
     }
-    */
 
-    public long getIdCondidate() {
-        return idCondidate;
+    public long getId() {
+        return id;
     }
 
     public String getFamilyName() {
@@ -86,11 +84,8 @@ public class Candidate {
         return email;
     }
 
-    /*
     public List<Inscription> getInscriptions() {
         return inscriptions;
     }
-    */
-   
-   
+
 }

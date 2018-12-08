@@ -11,7 +11,7 @@ import java.util.Objects;
 public class Formation {
     @Id
     @GeneratedValue
-    private long idFormation;
+    private long id;
 
     private String name;
     private Date startDate;
@@ -51,8 +51,8 @@ public class Formation {
                 '}';
     }
 
-    public Formation(long idFormation, String name, Date startDate, Date endDate, float price) {
-        this.idFormation = idFormation;
+    public Formation(long id, String name, Date startDate, Date endDate, float price) {
+        this.id = id;
         this.startDate = startDate;
         this.endDate = endDate;
         this.price = price;
@@ -63,8 +63,8 @@ public class Formation {
        // Empty constructor
     }
 
-    public void setIdFormation(long idFormation) {
-        this.idFormation = idFormation;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public void setStartDate(Date startDate) {
@@ -96,8 +96,8 @@ public class Formation {
         return inscriptions;
     }
 
-    public long getIdFormation() {
-        return idFormation;
+    public long getId() {
+        return id;
     }
 
     public Date getStartDate() {
